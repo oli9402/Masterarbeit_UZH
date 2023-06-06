@@ -13,3 +13,6 @@ Scripts can additionally be found in:
 ## Figures
 Generated figure used in the thesis can be found at:
 - "\\psyger-stor02.d.uzh.ch\methlab\Students\Oliver\Figures"
+
+## LaTex Script
+LaTex script is provided to fully reconstruct the thesis. Overleaf was used. 
