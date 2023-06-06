@@ -1,7 +1,7 @@
 # Script 1: a1_preprocessing (Preprocessing and Generating Table)
 In this script, four long format tables are generated. Each row is a single trial of a given subject. EEG is preprocessed and epoch for each trial is created. Computing this script takes long and is executed with cloud computer. If executed locally, file path should be adjusted accordingly (i.e., local = '...'). Code for ET data was not included since it wasn't used in the final thesis. 
 
-## Output
+### Output
 Four Tables (light/full x baseline/no baseline):
 - light = containing only six relevant (for P300) electrodes. (linear mixed-effects model)
 - full  =  containing all 105 electrodes. (Topoplots)
@@ -20,14 +20,14 @@ Steps:
 - subjects with many artifacts (< 50%)  and/or no demographics in BD.csv are indexed for later exclusion
 - Knoweledge Index and Learning Index are calculated
 
-## Output
+### Output
 Tables are saved in "\\psyger-stor02.d.uzh.ch\methlab\Students\Oliver\script\nobase_corr\Mat_Files" 
 
 # Script 3: a3_P300
 - In this script mean P300 for each trial is calculated using a time window of max peak +/- 50 ms.
 - For each age group an individual time window is calculated based on group average ERP waveform. 
 
-## Output
+### Output
 P300 variable is added to table generated in a2_0_demo_exclusion and saved as full_table_a3 in "\\psyger-stor02.d.uzh.ch\methlab\Students\Oliver\script\nobase_corr\Mat_Files"
 Second, a mat file with peaks latency of each group is saved truePeakMs.mat 
 
