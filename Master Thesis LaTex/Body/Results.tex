@@ -1,0 +1,305 @@
+\section{Results}\label{Results}
+\subsection{Behavioral Results}
+\subsubsection{Demographics}
+The basic demographics of the sample are displayed in table \ref{tab:demo}.
+\begin{table}[H]
+\centering
+    \begin{tabular}{llllllll}
+    \hline
+
+    \multicolumn{2}{c}{\textbf{N}} & \multicolumn{4}{c}{\textbf{Age}}                                                                                                        & \multicolumn{2}{c}{\textbf{Gender}}                                \\ \hline
+                    &          & \multicolumn{1}{c}{\textbf{Mean}} & \multicolumn{1}{c}{\textbf{SD}} & \multicolumn{1}{c}{\textbf{Min}} & \multicolumn{1}{c}{\textbf{Max}} & \multicolumn{1}{c}{\textbf{M/F}} & \multicolumn{1}{c}{\textbf{\%}} \\ \cline{3-8}
+\textbf{SL7}         & 541      & 7.39                              & 0.99                            & 5.04                             & 9.93                             & 390/151                          & 72/28                           \\
+\textbf{SL10}        & 1'053     & 12.50                             & 2.92                            & 8.15                             & 21.90                            & 762/291                          & 72/28                           \\
+\textbf{Total}      & 1'594     & 10.77                             & 3.44                            & 5.04                             & 21.90                            & 1'152/442                         & 72/28    \\ \hline     
+ \multicolumn{8}{l}{\small \textit{Note.} SL7 = Sequence Length 7. SL10 = Sequence Length 10.}
+\end{tabular}
+\caption{Basic Demographics}
+    \label{tab:demo}
+\end{table}
+
+\subsubsection{Diagnoses}
+To broadly characterize the sample, table \ref{tab:diag} shows the number of participants who received no diagnosis, a single diagnosis and those participants with multiple diagnoses. Furthermore, the most frequent diagnoses are displayed. 
+\begin{table}[H]
+\centering
+\begin{tabular}{lc}
+\hline
+\textbf{General}                  & \textbf{N}       \\ \hline
+No Diagnosis                      & 158              \\
+One Diagnosis                     & 644              \\
+Comorbidity                       & 793              \\ \hline
+\multicolumn{2}{l}{\textbf{Most Frequent Diagnoses}} \\ \hline
+Attention-Deficit/Hyperactivity Disorder                              & 902              \\
+Anxiety Disorder                  & 517              \\
+Specific Learning Disorder        & 331              \\
+Autism Spectrum Disorder          & 251              \\ \hline
+\end{tabular}
+\caption{Most Frequent Diagnoses}
+    \label{tab:diag}
+\end{table}
+
+\subsubsection{Visual Sequence Learning Task Performance}
+As depicted in table \ref{tab:avgTLS}, participants that learned the shorter sequence had on average 27.42 (4.61) artificial free trials, while participants assigned to the longer sequence had on average 41.05 (6.95) artificial free trials. Across sequence repetitions, participants with SL7 had on average 11.58 (6.02) trials categorized as unknown, 6.04 (2.35) as newly learned, 7.06 (6.03) as known, and 2.74 (1.85) as forgotten. A similar pattern was found in participants with SL10 where, on average, the highest proportion of trials was categorized as unknown followed by known and newly learned. 
+\begin{table}[H]
+\centering
+\begin{tabular}{lccccc}
+\hline
+
+\multicolumn{2}{c}{\textbf{Trials}}                & \multicolumn{4}{c}{\textbf{Learning Categories}}                     \\ \hline
+            &   & \textbf{UN} & \textbf{NL} & \textbf{K} & \textbf{F} \\ \cline{3-6} 
+\textbf{SL7}    & 27.42 (4.61)                              & 11.58 (6.02)      & 6.04 (2.35)       & 7.06 (6.03)      & 2.74 (1.85)     \\
+&&43.03 \% & 22.00 \% &25.01 \%&9.96 \%\\
+\textbf{SL10}   & 41.05 (6.95)                               & 18.08 (8.90)      & 8.80 (3.28)       & 10.26 (8.54)     & 3.93 (2.60)      \\
+&& 44.69 \% & 21.40 \% & 24.30 \% & 9.61 \% \\
+\textbf{Total} & 36.42 (8.99)                              & 15.87 (8.61)      & 7.86 (3.26)     & 9.17 (7.92)     & 3.52 (2.43)      \\
+&& 44.13 \% &21.61 \% &24.54 \% & 9.73 \% \\\hline 
+\multicolumn{6}{l}{\small \textit{Note.} UN = Unknown, NL = Newly Learned, K = Known, F = Forgotten.}\\[-0.3cm]
+\multicolumn{6}{l}{\small Average Trials and Learning Categories per participant with standard deviation.}
+\end{tabular}
+\caption{Average Trials and Learning Categories per Participant}
+\label{tab:avgTLS}
+\end{table}
+
+
+
+
+
+
+
+\paragraph{Knowledge Index}
+It was hypothesized that behavioral performance increases over the course of learning and that this performance increases with age during childhood and adolescents. To test these hypotheses, first behavioral measures KI and LI were plotted over repetitions for each age group. Second, linear mixed-effects models were fitted for inferential testing. 
+Figure \ref{fig:KI_LI} shows the average knowledge and learning index across repetitions for each age group (error bars are standard errors). Plotting KI over repetitions suggested that, on average, behavioral performance (i.e., KI) increased over repetitions and that older participants had higher behavioral performance (i.e., KI). The average learning index was highest in the first repetition, with no obvious age differences visible. 
+\begin{figure}[H]
+    \centering
+    \includesvg[width=\textwidth]{Figures/KI_LI_rep}   
+    \caption{Knowledge Index and Learning Index over Repetitions}
+    \label{fig:KI_LI}
+\end{figure}
+
+Providing inferential evidence was provided with a linear mixed effects model (results in table \ref{tab:ReKI}). The best-fit model of knowledge index (\ref{eq:mKI2}) had a fixed effects structure consisting of repetition (REP), age, sequence length (SL) and three interactions. Random effects structure included random intercept for participant, a random slope for repetition and their correlation: 
+\begin{equation}\label{eq:mKI2}
+KI \sim REP + Age + SL + REP\,x\,SL + REP\,x\,Age + Age\,x\,SL + (1+REP | Participant)
+\end{equation}
+As mentioned in the section \nameref{sec:Behavrioalana}, variables age and repetition were linearly transformed to help with interpretation of interaction \parencite{hoxMultilevelAnalysisTechniques2017}. Therefore, in the resulting model, the intercept reflected the average KI for average aged participants with a sequence length of 10 in the first repetition (i.e., expected KI when all explanatory variables are zero). Because a random slope (i.e., repetition) was included, the estimated variance of the intercepts was influenced by the linear transformation and thus reflected the variance of intercepts for average aged participants with SL10 in first repetition (i.e., conditioned on all explanatory variables being equal to zero) \parencite{hoxMultilevelAnalysisTechniques2017}.
+
+A significant main effect of repetition ($\beta$  = 0.033, CI = [0.03 ; 0.04], p <0.001) indicated that for participants of average age with a sequence length (SL) of 10, KI increased with repeated presentation of sequence. This increase was moderate by age ($\beta$  = 0.005, CI = [0.003;0.006], p <0.001) and SL ($\beta$  = 0.016, CI = [0.005;0.028], p = 0.006). Therefore, the model suggested that the effect of repetition on KI increased with age. Moderation of sequence length on the effect of repetition suggested that, for participants of average age, the effect of repetition on KI is greater in SL7 compared to SL10. This moderation should be interpreted with caution since no actual data is observed at this described age point (i.e., there are no participants of average age who had an SL of 7). Second, age significantly explained the differences in KI in the first repetition suggested by a main effect of age ($\beta$  = 0.015, CI = [0.01; 0.02], p<0.001). This indicated that KI in the first repetition was higher in older participants. The effect of age on KI in the first repetition was stronger in participants with sequence length 7 as suggested by a significant interaction of age and sequence length 7 ($\beta$ = 0.016, CI =  [0.005; 0.028], p = 0.006). Random components of the model revealed a large variance in effect of repetition. Exploring the random slopes estimated by lmer, revealed that 868 participants had a negative slope.  
+
+Taken together, the model suggests that participants increase their knowledge of the sequence over repetitions. Additionally, age effects are revealed by the model with older participants having an increased effect of repetition on KI. A second age effect suggested by the model is that KI in the first repetition is on average higher for older participants. 
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lccccc}
+\hline
+\textbf{Variable}            & \textbf{Beta} & \textbf{SE}          & \textbf{CI}           & \textbf{t-value} & \textbf{p-value} \\ \hline
+Intercept                    & 0.363         & 0.007                & 0.35 - 0.38           & 50.08            & \textless{}0.001 \\
+Rep                          & 0.033         & 0.003                & 0.03 - 0.04           & 12.83            & \textless{}0.001 \\
+Age                          & 0.015         & 0.002                & 0.01 - 0.02           & 6.67             & \textless{}0.001 \\
+SL (7)                       & 0.291         & 0.037                & 0.22 - 0.36           & 7.90             & \textless{}0.001 \\
+Rep x Age                    & 0.005         & 0.001                & 0.003 - 0.006         & 5.75             & \textless{}0.001 \\
+Rep x SL (7)                 & 0.016         & 0.006                & 0.005 - 0.028         & 2.76             & 0.006            \\
+Age x SL (7)                 & 0.048         & 0.009                & 0.03 - 0.07           & 5.23             & \textless{}0.001 \\ \hline
+\textbf{Variance Components} & \textbf{SD}   & \multicolumn{2}{l}{\textbf{Goodness of fit}} & \textbf{}        & \textbf{}        \\ \hline
+Participant                  & 0.14          & \multicolumn{2}{l}{Log Likelihood}           & -461.09          &                  \\
+Rep                          & 0.04          &                      &                       &                  &                  \\
+Cor(Participant, Rep)        & 0.53          &                      &                       &                  &                  \\
+Residual                     & 0.21          &                      &                       &                  &                  \\ \hline
+\multicolumn{6}{l}{\small \textit{Note.} Rep = Repetition, SL7 = Sequence Length 7, SL10 = Sequence Length 10.}\\[-0.3cm]
+\multicolumn{6}{l}{\small Intercept represents average aged participants with SL10 at first repetition.}\\
+\end{tabular}
+\caption{Model Output: Increase in Knowledge Index over Repetitions}
+\label{tab:ReKI}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Learning Index}
+Learning Index was a second behavioral index of learning and is mentioned here for the sake of completeness even though it was not a focus in this thesis.
+For the learning index, no random effect structure could be estimated. Therefore, the best-fit model was a linear multiple regression model (\ref{eq:mLI}) and results are displayed in table \ref{tab:ReLI}).
+
+\begin{equation}\label{eq:mLI}
+LI \sim REP + Age + SL + REP\,x\,Age + REP\,x\,SL + Age\,x\,SL + REP\,x\,Age\,x\,SL
+\end{equation}
+
+A significant main effect of repetition on learning index was found ($\beta$ = -0.041, CI = [-0.05; -0.04], p<0.001). This suggested that on average the learning index decreased with repetition for participants of average age with sequence length 10 and decreased even further with increasing age ($\beta$ = -0.003, CI = [-0.004; -0.002], p<0.001). The three way interaction of repetition, age, and sequence length 7 suggested that the decreasing effect of age on repetition is even stronger for participants with sequence length 7 ($\beta$ = -0.014, CI = [-0.02; - 0.01], p<0.001). Furthermore, older age was associated with a higher learning index in the first repetition in SL10 ($\beta$= 0.011, CI = [0.01; 0.02], p<0.001) and even more so in participants with SL7 ($\beta$ = 0.031, CI = [0.02; 0.05], p<0.001). 
+
+\begin{table}
+\centering
+\begin{tabular}{lccccc}
+\hline
+\textbf{Variable}            & \textbf{Beta} & \textbf{SE}          & \textbf{CI}           & \textbf{t-value} & \textbf{p-value} \\ \hline
+Intercept                    & 0.286         & 0.006                & 0.28 - 0.30           & 50.09            & \textless{}0.001 \\
+Rep                          & -0.041         & 0.002                & -0.05 - -0.04           & -18.33            & \textless{}0.001 \\
+Age                          & 0.011         & 0.002                & 0.01 - 0.02           & 6.41             & \textless{}0.001 \\
+SL (7)                       & 0.201         & 0.029                & 0.14 - 0.26           & 6.80             & \textless{}0.001 \\
+Rep x Age                    & -0.003         & 0.001                & -0.004 - -0.002         & -4.14             & \textless{}0.001 \\
+Rep x SL (7)                 & -0.078         & 0.012                & -0.10 - -0.05         & -6.45             & \textless{}0.010            \\
+Age x SL (7)                 & 0.031         & 0.007                & 0.02 - 0.05          & 4.21             & \textless{}0.001 \\ 
+(Rep x Age) x SL (7) & -0.014 & 0.003 & -0.02 - -0.01 & -4.56 & \textless{}0.001 \\ \hline
+\multicolumn{6}{l}{\small \textit{Note.} Rep = Repetition, SL7 = Sequence Length 7, SL10 = Sequence Length 10.}\\[-0.3cm]
+\multicolumn{6}{l}{\small Intercept represents average aged participants with SL10 at first repetition.}\\
+\end{tabular}
+\caption{Model Output: Decrease in Learning Index over Repetitions}
+\label{tab:ReLI}
+\end{table}
+
+\subsection{Neurophysiological Results}
+Thus far it was shown that the estimated linear mixed effects models suggested that participants on average increase their knowledge of the sequence over the course of learning and that older participants tended to learn greater proporation of the sequence (i.e., KI). In a next step, it was investigated how the neurophysiological measure (i.e., P300 amplitude) changed over the course of learning.
+\subsubsection{P300 Amplitude over Repetitions}
+Firstly, the mean P300 amplitude in each age group was plotted over sequence repetition (see figure \ref{fig:KI_LI}). This plot gave the first impression that P300 amplitude decreased over repetitions and that there were potential age effects involved. Plotting ERP of repetitions for four randomly selected groups is depicted in figure \ref{fig:erp_rep} and showed the decrease in amplitude around 400 ms across repetitions. 
+%plot
+\begin{figure}[H]
+    \centering  
+    \includesvg[width =0.8\textwidth]{Figures/meanP_rep}   
+    \caption{Decrease of Mean P300 Amplitude over Repetitions}
+    \label{fig:KI_LI}
+\end{figure}
+%ERP
+\begin{figure}[H]
+    \centering
+    \includesvg[width =\textwidth]{Figures/erp_age_rep_c}   
+    \caption{ERP over Repetitions Visualized for Four Groups}
+    \label{fig:erp_rep}
+\end{figure}
+
+Second, a mixed-effects model was selected by the step function to provide inferential evidence for changes in mean P300 amplitude over repetition. The selected model was: 
+\begin{equation}\label{eq:mP3002}
+mP300 \sim REP + Age + Gender + SL  + mBase + REP \,x\, Age + REP 
+\,x \,SL + (1 | Participant).
+\end{equation}
+
+
+In average aged participants with sequence length 10, mean P300 amplitude decreased significantly on average with repetition ($\beta$ = -0.104, CI = [-0.12; -0.09], p < 0.001). This decrease was significantly stronger in older age ($\beta$ = -0.008, CI = [-0.011; -0.005], p<0.001). However, age did not explain the differences in the mean P300 amplitude in the first repetition ($\beta$ = -0.006, CI = [-0.03; -0.52], p = 0.605). A significant interaction of repetition and sequence length 7 ($\beta$ = -0.091, CI = [-0.12; -0.07], p<0.001) indicated that the effect of repetition is further moderated by SL, meaning that average aged participants in SL7 had a stronger decrease compared to SL10. This interaction should be viewed with caution since no actual data was observed in this range (i.e., no average aged participants had SL of 7). Mean P300 amplitude was significantly higher in the first repetition for participants with sequence length 7 compared to participants with SL10 ($\beta$ = 0.209, CI = [0.04; 0.40], p = 0.017). On average, female participants had lower P300 amplitudes compared to male participants ($\beta$ = -0.162, CI = [-0.29; -0.04], p = 0.010). 
+\begin{table}[H]
+\centering
+\begin{tabular}{lccccc}
+\hline
+\textbf{Variable}            & \textbf{Beta} & \textbf{SE}          & \textbf{CI}           & \textbf{t-value} & \textbf{p-value} \\ \hline
+Intercept                    & 1.166         & 0.042                & 1.08 - 1.25           & 27.63            & \textless{}0.001 \\
+Rep                          & -0.104         & 0.005                & -0.12 - -0.09           & -19.077          & \textless{}0.001 \\
+Age                          & -0.006         & 0.012                & -0.03 - 0.02           & -0.52             & 0.605 \\
+Gender (F)                 &-0.162      & 0.063                & -0.29 - -0.04           & -2.57            & 0.010 \\
+SL (7)                       & 0.209         & 0.087                & 0.04 - 0.40           & 2.38             & 0.017 \\
+meanBase                 & -0.223         & 0.044                & -0.23 - -0.21           & -49.98             & \textless{}0.001 \\
+Rep x Age                    & -0.008         & 0.002                & -0.011 - -0.005         & -5.00             & \textless{}0.001 \\
+Rep x SL (7)                 & -0.091         & 0.013                & -0.12 - -0.07         & -6.90             & \textless{}0.001            \\ \hline
+\textbf{Variance Components} & \textbf{SD}   & \multicolumn{2}{l}{\textbf{Goodness of fit}} & \textbf{}        & \textbf{}        \\ \hline
+Participant                  & 1.10          & \multicolumn{2}{l}{Log Likelihood}           & -106636.4         &                  \\
+
+Residual                     & 1.46          &                      &                       &                  &                  \\ \hline
+\multicolumn{6}{l}{\small \textit{Note.} Rep = Repetition, SL7 = Sequence Length 7, SL10 = Sequence Length 10.}\\
+
+\end{tabular}
+\caption{Model Output: Decrease in Mean P300 Amplitude over Repetitions}
+\label{tab:my_label}
+\end{table}
+\subsubsection{Predicting Learning Success}
+After finding that mean P300 amplitude decreased over repetition, the next step consisted of examining whether the knowledge index could be predicted by mean P300 amplitude of a given sequence repetition within participants. Step function selected the following model as having the best fit (with results in table \ref{tab:predKI}): 
+\begin{equation}\label{eq:mPre2}
+KI \sim mP300 + Age + Gender +  Age \,x\, Gender + (1 | Participant).
+\end{equation}
+The model had a fixed effect structure of age, gender, and their interaction and intercept as random effect.
+A significant main effect of mean P300 amplitude ($\beta$ = -0.003, CI = [-0.006; -0.001], p = 0.025) revealed by the model suggested that increases in KI are associated with decreases in mean P300 amplitude. Furthermore, the step function selected a model without interaction between mean P300 amplitude and age, suggesting that the predictability of mean P300 amplitude is similar across age. 
+\begin{table}[H]
+\centering
+\begin{tabular}{lccccc}
+\hline
+\textbf{Variable}            & \textbf{Beta} & \textbf{SE}          & \textbf{CI}           & \textbf{t-value} & \textbf{p-value} \\ \hline
+Intercept                    & 0.468         & 0.007                & 0.46 - 0.48           & 67.94            & \textless{}0.001 \\
+meanP300                          & -0.003         & 0.001                & -0.006 - -0.001           & -2.25          & 0.025 \\
+Age                          & 0.009         & 0.002                & 0.005 - 0.013           & 4.72             & \textless{}0.001  \\
+Gender (F)                 &0.014      & 0.013                & -0.01 - 0.04           & 1.12            & 0.264\\
+Age x Gender (F)                    & 0.010         & 0.004                & 0.003 - 0.017         & 2.84             & 0.004 \\\hline
+\textbf{Variance Components} & \textbf{SD}   & \multicolumn{2}{l}{\textbf{Goodness of fit}} & \textbf{}        & \textbf{}        \\ \hline
+Participant                  & 0.20          & \multicolumn{2}{l}{Log Likelihood}           & -106636.4         &                  \\
+
+Residual                     & 0.23          &                      &                       &                  &                  \\ \hline
+
+\end{tabular}
+\caption{Model Output: Predicting Differences in KI with Mean P300 Amplitude}
+\label{tab:predKI}
+\end{table}
+\subsubsection{P300 Amplitude and Learning Categories}
+So far it was established that on average participants increase their knowledge of sequence over the course of learning and that this was accompanied by a decrease in mean P300 amplitude over repetitions. Furthermore, the KI could be predicted by mean P300 amplitude within participants. Learning categories for individual stimuli differed in P300 amplitude regardless of repetition. The reason for this analysis was two fold. First, to disentangle the possibility that the decrease in P300 amplitude was due to habituation effects. Second, to provide a stronger link to behavioral measures of learning on a stimulus level rather than a sequence level. Plotting the average ERPs of learning categories for four randomly selected age groups (\ref{fig:erp_ls}) indicated that the P300 peaks differ between the learning categories. Furthermore, plotting the topography of the learning categories \ref{fig:topo} indicated that the known stimuli had a lower and more widespread distribution of positive voltage compared to unknown stimuli.
+%erp
+\begin{figure}[H]
+    \centering
+    \includesvg[width =\textwidth]{Figures/erp_age_learningstates_c}   
+    \caption{ERP of Learning Categories Visualized for Four Groups}
+    \label{fig:erp_ls}
+\end{figure}
+
+
+%topo
+\begin{figure}[H]
+     \centering
+     \includesvg[width =\textwidth]{Figures/topolearning}   
+    \caption{Topoplots of Learning Categories Visualized for Four Groups}
+    \label{fig:topo}
+\end{figure}
+\newpage
+A final mixed effects model was selected with fixed effects structure of LearningCategories (reference: NL), Age, Gender, and base, as well as a random intercept for every participant (results in table \ref{tab:ReP3Cat}):   
+
+\begin{equation}\label{eq:mCat2}
+P300 \sim LearningCategories +  Age + Gender + base + (1 | Participant).
+\end{equation}
+
+The model revealed the following results.
+Learning categories forgotten ($\beta$ = -0.202, CI  =[-0.33; -0.07], p = 0.002) and known ($\beta$ = -0.378, CI = [-0.48; -0.28], p<0.001) had significantly lower P300 amplitudes compared to newly learned, while stimuli categorized as unknown did not differ significantly ($\beta$ = -0.068, CI = [-0.16; -0.02], p = 0.133). Overall, age is associated with lower P300 amplitudes ($\beta$ = -0.024, CI = [-0.04; -0.01], p = 0.003) but the step function did not select an interaction between learning categories and age, suggesting similar differences between newly learned and other learning categories across age. 
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lccccc}
+\hline
+\textbf{Variable}            & \textbf{Beta} & \textbf{SE}          & \textbf{CI}           & \textbf{t-value} & \textbf{p-value} \\ \hline
+Intercept                    & 1.118         & 0.046                & 1.03 - 1.21           & 24.36           & \textless{}0.001 \\
+Forgotten                          & -0.202        & 0.065                & -0.33 - -0.07           & -3.10         & 0.002 \\
+Known                          & -0.378         & 0.050               & -0.48 - -0.28           & -7.53            & \textless{}0.001  \\
+Unknown                          & -0.068         & 0.045              & -0.16 - -0.02           & -1.50            & 0.133  \\
+Age                          & -0.024         & 0.008             & -0.04 - -0.01           & -2.95           & 0.003  \\
+Gender (F)                 & -0.155      & 0.062                & -0.28 - -0.03           & -2.52           & 0.012\\
+mBase                    & -0.232         & 0.004                & -0.24 - -0.22         & -54.12             & \textless{}0.001 \\\hline
+\textbf{Variance Components} & \textbf{SD}   & \multicolumn{2}{l}{\textbf{Goodness of fit}} & \textbf{}        & \textbf{}        \\ \hline
+Participant                  & 0.87          & \multicolumn{2}{l}{Log Likelihood}           & -164135.2        &                  \\
+
+Residual                     & 4.03         &                      &                       &                  &                  \\ \hline
+
+\end{tabular}
+\caption{Model Output: P300 Amplitude Differences in Learning Categories}
+\label{tab:ReP3Cat}
+\end{table}
+
+
+Next, a pairwise post hoc comparison of the learning categories was performed since the mixed effects model only compares each learning category with the reference category. The post hoc comparison was for average aged participants, but since the model did not include an interaction between age and learning categories the differences between learning categories were thought to be comparable across age. As shown in table \ref{tab:posthoc}, known stimuli had significantly lower P300 amplitudes compared to unknown stimuli or forgotten. Furthermore, forgotten stimuli did not differ significantly from unknown stimuli.
+
+\begin{table}
+\centering
+\begin{tabular}{lccc}
+\hline
+\textbf{Contrast}            & \textbf{Effect Size} & \textbf{CI}          & \textbf{p-value*}          \\ \hline
+NL - K                    & 0.094         & 0.07 - 0.12                &  \textless{}0.001 \\
+NL - UN                          & 0.017              & -0.005 - 0.04                  & 0.796 \\
+NL - F                          & 0.050         & 0.02 - 0.08                         & 0.012 \\
+K - UN                     & -0.077         & -0.10 - -0.05                           & \textless{}0.001 \\
+F - K                   & 0.044         & 0.01 - 0.07                       & 0.048 \\
+F - UN                 & -0.033                      & -0.06 - -0.004                & 0.164             \\ \hline
+\multicolumn{4}{l}{\small \textit{Note}. NL = Newly Learned, K = Known, UN = Unknown, F = Forgotten.}\\[-0.3cm]
+\multicolumn{4}{l}{\small *Bonferroni corrected.}\\
+\end{tabular}
+\caption{Post Hoc Contrasts of Learning Categories}
+\label{tab:posthoc}
+\end{table}
+\subsection{Exploratory Analysis}
+
+Using $ggmModSelect$ the final model structure arrived after minimizing BIC is depicted in figure \ref{fig:net}. The circles are nodes (i.e., selected variables), and the lines represent edges or the estimated relationship between nodes (i.e., partial correlation). All edges are undirected, with blue edges being positive partial correlations and red edges being negative partial correlations. The filled circles around each node displays the predictability (i.e., r-squared) of that node by its neighboring nodes (i.e., directly linked nodes) \parencite{haslbeckHowPredictableAre2017}. See table \ref{tab:Rsqu} in \nameref{SuppM} for the r-squared of each node. Node placement was determined by Fruchterman–Reingold algorithm \parencite{fruchtermanGraphDrawingForcedirected1991} which creates a layout in which highly connected nodes are forced into the center of the network layout and less connected nodes are placed in outer positions of the layout \parencite{epskampQgraphNetworkVisualizations2012}. 
+%plot
+\begin{figure}[H]
+    \centering  
+    \includesvg[width =\textwidth]{Figures/networksvg}   
+    \caption{Gaussian Graphical Model Estimated with ggmModSelect}
+    \label{fig:net}
+\end{figure}
+
+In the resulting network with 12 nodes, 31 non-zero edges out of 66 possible edges were included. The strongest positive relationship in the network was between Emotional Dysregulation (V1) and Thought Problems (V3) with a partial correlation of 0.48. The strongest negative relationship was between Leaning Problems (V6) and Working Memory Index (V4) with -0.25. A main interest in this analysis were the nodes P300 Beta (V9) and Mean Knowledge Index (V8) and their direct connecting nodes. After conditioning on all nodes, Mean Knowledge Index had a direct relationship to Processing Speed Index (V5, partial correlation = 0.18), Working Memory Index (V4, partial correlation = 0.23), Age (V7, partial correlation = 0.21), P300 Beta (V9, partial correlation = -0.07) and Inattention (V12, partial correlation =  -0.07). The decrease in P300 amplitude over repetition (P300 Beta) was associated negatively with the Mean Knowledge Index (V8, partial correlation = -0.07) and positively associated with Working Memory Index (V4, partial correlation = 0.07) after conditioning on all nodes. That is, a higher mean knowledge index is associated with a steeper decrease in P300 amplitude over repetitions after controlling for all nodes in the network (e.g., Age). A positive partial correlation between Working Memory Index and P300 Beta suggested that after conditioning on all nodes, higher working memory abilities are associated with a steeper decrease in P300 amplitudes over repetitions. Overall, these conditional associations explained 1\% of variance in P300 Beta which may need to be considered during interpretation of the relevance of this finding \parencite{haslbeckHowWellNetwork2018}.  Furthermore, bootstrapped confidence intervals (alpha = 0.05) of both edges connected to P300 Beta included zero, suggesting that these edges were not significantly different from zero (Mean Knowledge Index: $CI = [-0.11; 0]$, Working Memory Index: $CI = [0; 0.135]$). 
+

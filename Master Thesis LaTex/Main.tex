@@ -1,0 +1,136 @@
+%%
+%% This is file `./samples/longsample.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% apa7.dtx  (with options: `longsample')
+%% ----------------------------------------------------------------------
+%% 
+%% apa7 - A LaTeX class for formatting documents in compliance with the
+%% American Psychological Association's Publication Manual, 7th edition
+%% 
+%% Copyright (C) 2019 by Daniel A. Weiss <daniel.weiss.led at gmail.com>
+%% 
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License (LPPL), either
+%% version 1.3c of this license or (at your option) any later
+%% version.  The latest version of this license is in the file:
+%% 
+%% http://www.latex-project.org/lppl.txt
+%% 
+%% Users may freely modify these files without permission, as long as the
+%% copyright line and this statement are maintained intact.
+%% 
+%% This work is not endorsed by, affiliated with, or probably even known
+%% by, the American Psychological Association.
+%% 
+%% ----------------------------------------------------------------------
+%% 
+\documentclass[man]{apa7}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lipsum}
+\usepackage{wrapfig}
+\usepackage{indentfirst}
+\usepackage{pdfpages}
+\usepackage{multirow}
+\usepackage[document]{ragged2e} %for blocksatz +justifying
+\usepackage{tikz}
+\geometry{left=2.6cm,bottom=2.6cm,right=2.6cm,top=2.6cm}
+\usepackage[english]{babel}
+\usepackage{svg}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{float}
+\usetikzlibrary{positioning}
+\setcounter{secnumdepth}{5}
+\restylefloat{figure}
+\floatstyle{plaintop} 
+\restylefloat{table}
+\usepackage{csquotes}
+\hypersetup{
+     colorlinks=true,
+     filecolor=black,
+     urlcolor=blue,
+     citecolor = blue
+}
+
+\usepackage[style=apa,sortcites=true,sorting=nyt,backend=biber, babel=other]{biblatex}
+\DeclareLanguageMapping{american}{american-apa}
+\addbibresource{bibliography.bib}
+
+% so that page number in title page top right (fancy)
+\patchcmd{\titlepage}
+  {\thispagestyle{empty}}
+  {\thispagestyle{fancy}}
+  {}
+  {}
+
+
+
+
+\begin{document}
+%\justifying
+\raggedright
+\raggedbottom
+
+
+\parindent24pt
+
+%---------------------
+%---------TitlePage-------
+%---------------------
+%\pagenumbering{gobble}
+\pagenumbering{arabic}
+\include{Head/titlepage}
+
+\clearpage
+
+%---------------------
+%---------TOC---------
+%---------------------
+
+\hypersetup{linkcolor=black}
+\tableofcontents
+\addtocontents{toc}{~\hfill\textbf{Page}\par}
+\clearpage
+
+\listoffigures
+\listoftables
+\clearpage
+\hypersetup{linkcolor=blue}
+
+%---------------------
+%---------Abstract----
+%---------------------
+\input{Head/Abstract}
+
+
+
+%---------------------
+%---------Start-------
+%---------------------
+
+\input{Body/Introduction}
+
+\clearpage
+\input{Body/Methods}
+
+\clearpage
+
+\input{Body/Results}
+\clearpage
+
+\input{Body/Discussion}
+\clearpage
+\input{Body/Data Citation}
+\input{Body/Manuscript and Code Repository}
+\sloppy
+\printbibliography[heading=bibnumbered]
+
+\clearpage
+\input{Body/Supplementary Material}
+\newpage
+\includepdf[page=1]{Selbstständigkeitserklärung}
+\end{document}
