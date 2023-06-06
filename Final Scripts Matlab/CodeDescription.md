@@ -30,3 +30,14 @@ Tables are saved in "\\psyger-stor02.d.uzh.ch\methlab\Students\Oliver\script\nob
 ## Output
 P300 variable is added to table generated in a2_0_demo_exclusion and saved as full_table_a3 in "\\psyger-stor02.d.uzh.ch\methlab\Students\Oliver\script\nobase_corr\Mat_Files"
 Second, a mat file with peaks latency of each group is saved truePeakMs.mat 
+
+# Script 4: a4_topo
+In this script, baseline corrected data set is used to create topoplots and average of six relevant electrodes for later plots.
+Figures are created:
+- electrode selection figure
+- learning categories figure
+
+## Output
+- light version table for topoplots 
+- full_tab with additional baseline corrected data for later plots 
+- topoplots for thesis 
