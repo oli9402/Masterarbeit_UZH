@@ -37,7 +37,7 @@ Figures are created:
 - electrode selection figure
 - learning categories figure
 
-## Output
+### Output
 - light version table for topoplots 
 - full_tab with additional baseline corrected data for later plots 
 - topoplots for thesis 
