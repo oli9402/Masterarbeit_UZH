@@ -56,3 +56,6 @@ Neurophysiological Results Figures:
 - Mean P300 Amplitude over Repetitions
 - ERP over Repetition
 - ERP for Learning Categories
+
+### Output
+Figures must be manually saved. But used figures can be found in "\\psyger-stor02.d.uzh.ch\methlab\Students\Oliver\Figures"
