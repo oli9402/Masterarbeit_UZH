@@ -1,3 +1,8 @@
+
+# Main Script: a0_main
+This script calls all other scripts.
+The individual scripts can be executed without the main script but prefix (local) must be uncommented manually and adjusted correctly if wanted to execut on local device. 
+
 # Script 1: a1_preprocessing (Preprocessing and Generating Table)
 In this script, four long format tables are generated. Each row is a single trial of a given subject. EEG is preprocessed and epoch for each trial is created. Computing this script takes long and is executed with cloud computer. If executed locally, file path should be adjusted accordingly (i.e., local = '...'). Code for ET data was not included since it wasn't used in the final thesis. 
 
@@ -44,4 +49,10 @@ Figures are manually saved as svg and edited with inkscape.
 - topoplots for thesis 
 
 # Script 5: a5_plots
-
+This script creates four figures used in the thesis. The figures are stored manually in svg. 
+Beahvioral Results Figure: 
+- Avg. KI/LI over repetitions for each age group
+Neurophysiological Results Figures: 
+- Mean P300 Amplitude over Repetitions
+- ERP over Repetition
+- ERP for Learning Categories
