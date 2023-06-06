@@ -36,8 +36,12 @@ In this script, baseline corrected data set is used to create topoplots and aver
 Figures are created:
 - electrode selection figure
 - learning categories figure
+Figures are manually saved as svg and edited with inkscape. 
 
 ### Output
 - light version table for topoplots 
 - full_tab with additional baseline corrected data for later plots 
 - topoplots for thesis 
+
+# Script 5: a5_plots
+
