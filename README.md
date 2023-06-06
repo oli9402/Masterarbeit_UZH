@@ -1,6 +1,11 @@
 # Masterarbeit_UZH
 This repository contains the code and latex scripts for my master thesis titled: "Investigating the Neuronal Basis of Learning Processes and Memory Formation in Children and Adolescents with Various Psychiatric Disorders"
 
+Author: B.Sc. Oliver Zingg
+Supervisors: Prof. Dr. Nicolas Langer, M.Sc. Dawid Strzelczyk
+Chair of Methods of Plasticity Research: Prof. Dr. Nicolas Langer
+Date: 01.06.2023
+
 ## Scripts
 Matlab was used to generat data tables and for most plots. 
 R was used for statistical analysis and extracting information for tables used in the thesis.
