@@ -10,3 +10,6 @@ Scripts can additionally be found in:
 - "\\psyger-stor02.d.uzh.ch\methlab\Students\Oliver\script\Final Scripts R"
 
 
+## Figures
+Generated figure used in the thesis can be found at:
+- "\\psyger-stor02.d.uzh.ch\methlab\Students\Oliver\Figures"
