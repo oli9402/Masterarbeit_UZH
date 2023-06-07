@@ -16,8 +16,8 @@ Scripts can additionally be found in:
 
 ## Data
 Matlab:
-- \\psyger-stor02.d.uzh.ch\methlab\Students\Oliver\script\nobase_corr\Mat_Files
-- \\psyger-stor02.d.uzh.ch\methlab\Students\Oliver\script\base_corr\Topo
+- \\\\psyger-stor02.d.uzh.ch\methlab\Students\Oliver\script\nobase_corr\Mat_Files
+- \\\\psyger-stor02.d.uzh.ch\methlab\Students\Oliver\script\base_corr\Topo
 R: 
 - \\\\psyger-stor02.d.uzh.ch\methlab\Students\Oliver\script\Final Scripts R\Data
 
