@@ -15,4 +15,4 @@ Furthermore, mean P300 for every repetition is created for the linear mixed-effe
 Relevant information for tables are extracted manually. 
 
 # Script 3: b3_network
-Finally, this script performs a network analysis using ggmModSelect. 
+Finally, this script performs a network analysis using ggmModSelect. Figure of the network is saved manually. 
