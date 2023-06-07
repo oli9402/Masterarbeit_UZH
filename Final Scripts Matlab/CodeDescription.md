@@ -25,6 +25,7 @@ Steps:
 - subjects with many artifacts (< 50%)  and/or no demographics in BD.csv are indexed for later exclusion
 - Knoweledge Index and Learning Index are calculated
 
+
 ### Output
 Tables are saved in "\\psyger-stor02.d.uzh.ch\methlab\Students\Oliver\script\nobase_corr\Mat_Files" 
 
@@ -59,3 +60,7 @@ Neurophysiological Results Figures:
 
 ### Output
 Figures must be manually saved. But used figures can be found in "\\psyger-stor02.d.uzh.ch\methlab\Students\Oliver\Figures"
+
+# Script 6: a6_tableforR
+
+Creates csv file for analysis in R
